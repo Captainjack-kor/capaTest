@@ -46,6 +46,28 @@ const MainContentsList = () => {
       material: "구리",
       inMeeting: false,
     },
+    {
+      uuid: 5,
+      title: "기차 시제품 제작",
+      subTitle: "C 고객사",
+      date: "2020.12.12까지 납기",
+      products: "1개",
+      total: "20개",
+      howwemade: "선반",
+      material: "구리",
+      inMeeting: false,
+    },
+    {
+      uuid: 6,
+      title: "기차 시제품 제작",
+      subTitle: "C 고객사",
+      date: "2020.12.12까지 납기",
+      products: "1개",
+      total: "20개",
+      howwemade: "선반",
+      material: "구리",
+      inMeeting: false,
+    },
   ]});
 
   return (
