@@ -1,21 +1,26 @@
 .componentsList {
   list-style: none;
-  padding-left: 0px;
+  /* padding-left: 0px; */
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  /* justify-content: space-around; */
-  /* justify-content: space-evenly; */
+  justify-content:left;
   flex-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
 }
 
 .listsEffect {
   padding: 1.5rem 1rem 2rem 1rem;
   margin-bottom: 1rem;
+  margin-right: 1rem;
   border: 1px #eeeeee solid;
   /* height: 30%; */
-  width: 30%;
+  width: 27rem;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.listsEffect:hover {
+  border: 1px #63a4ff solid;
 }
 
 #buttonPosition {
