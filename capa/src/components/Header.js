@@ -1,5 +1,4 @@
 import { BankOutlined } from '@ant-design/icons';
-
 import "../style/Header.css";
 
 const Header = () => {

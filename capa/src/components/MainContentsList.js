@@ -93,7 +93,7 @@ const MainContentsList = ({ inMeetingHandleValue }) => {
 
   const inMeetingChecker = list.lists.filter(value => value.inMeeting === true);
 
-  console.log(inMeetingChecker.length);
+  //console.log(inMeetingChecker.length);
 
   return (
     <>
