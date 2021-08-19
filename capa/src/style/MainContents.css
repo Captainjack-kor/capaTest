@@ -4,6 +4,7 @@
   height: 100vh;
 }
 
+
 .leftSpace {
   flex: 1;
 }
@@ -192,4 +193,29 @@ input:checked + .slider:before {
 
 .nothingInhere > div {
   margin-top: 2.8rem;
+}
+
+@media screen and ( max-width:767px ) {
+  #mainContents {
+    display: flex;
+    height: 100vh;
+    /* width: 100%; */
+    margin-left: 1rem;
+  }
+
+  .toggleComponentsPosition {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .toggleComponentsPosition > div {
+    display: flex;
+    /* flex-direction: column; */
+  }
+
+  .toggleWithDiscPosition {
+    margin-left: 0.5rem;
+    margin-top: 1.5rem;
+  }
 }

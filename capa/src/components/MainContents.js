@@ -57,7 +57,7 @@ const MainContents = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="toggleWithDiscPosition">
             <div> 
               <label className="switch">
                 <input type="checkbox" onChange={onChange}/>

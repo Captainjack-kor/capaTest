@@ -44,3 +44,51 @@
 .leftHeaderContents {
   margin-top: 1rem;
 }
+
+.mobileMenuBtn {
+  display: none;
+}
+
+@media screen and ( max-width:767px ) {
+  #header {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    top: 0%;
+    width: 100%;
+    background-color: #1565c0;
+    color: white;
+    height: 3rem;
+  }
+
+  #header > div {
+    display: flex;
+    /* margin-top: 0.8rem; */
+    margin-left: 2.5rem;
+    padding-right: 0rem;
+  }
+
+  .capaLogo {
+    font-size: 0.5rem;
+    font-weight: 800;
+    margin-left: 1.5rem;
+    margin-right: 0.3rem;
+  }
+
+  .capaLogoName {
+    font-size: 0.5rem;
+  }
+
+  .rightHeaderContents > div {
+    display: none;
+  }
+
+  .mobileMenuBtn {
+    display: block;
+  }
+
+  .mobileMenuBtn:hover {
+    cursor: pointer;
+  }
+
+}

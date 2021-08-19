@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Header from "../src/components/Header";
 import MainContents from "../src/components/MainContents";
-import MobileHeader from "../src/components/MobileHeader";
 import { useMediaQuery } from "react-responsive";
 
 
@@ -22,10 +21,12 @@ function App() {
 
   return (
     <>
-      {isPc && (
+      <Header />
+      <MainContents />
+      
+      {/* {isPc && (
         <>
-          <Header />
-          <MainContents />
+         
         </>
       )}
 
@@ -38,10 +39,10 @@ function App() {
 
       {isMobile && (
         <>
-          <MobileHeader />
+          <Header />
           <MainContents />
         </>
-      )}
+      )} */}
       
     </>
   );
