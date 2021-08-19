@@ -1,0 +1,46 @@
+#header {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  top: 0%;
+  width: 100%;
+  background-color: #1565c0;
+  color: white;
+  height: 4rem;
+}
+
+#header > div {
+  display: flex;
+  /* margin-top: 0.8rem; */
+  margin-left: 2.5rem;
+  padding-right: 3rem;
+}
+
+.capaLogo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-right: 0.3rem;
+}
+
+.capaLogoName {
+  font-size: 1.5rem;
+}
+
+.companyToManuf {
+  font-size: 0.9rem;
+  margin-right: 2rem;
+}
+
+.logoutLogo {
+  font-size: 0.9rem;
+  margin-left: 2rem;
+}
+
+.rightHeaderContents {
+  margin-top: 1.3rem;
+}
+
+
+.leftHeaderContents {
+  margin-top: 1rem;
+}

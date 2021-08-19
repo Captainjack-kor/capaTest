@@ -1,0 +1,45 @@
+#mainContents {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.leftSpace {
+  flex: 1;
+}
+
+.middleSpace {
+  flex: 7;
+  margin-top: 3rem;
+}
+
+.rightSpace {
+  flex: 1;
+}
+
+.boldFont {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.toggleComponentsPosition {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.toggleComponentsPosition > div {
+  display: flex;
+}
+
+.toggleComponentsPosition div:nth-child(1) {
+  margin-right: 1rem;
+}
+
+.listPosition {
+  /* display: flex; */
+  /* flex-direction: column; */
+  margin-top: 3rem;
+}

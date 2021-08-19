@@ -1,0 +1,13 @@
+.componentsList {
+  list-style: none;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.listsEffect {
+  border: 1px lightgray solid;
+  height: 20rem;
+  width: 32.2%;
+}
