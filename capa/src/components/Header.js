@@ -1,26 +1,24 @@
 import { BankOutlined, MenuOutlined } from '@ant-design/icons';
 import "../style/Header.css";
-import React, { useState } from "react";
-import { $CombinedState } from 'redux';
+import React, { useState, useEffect } from "react";
 import $ from "jquery";
+  
 
 const Header = () => {
   const [slider, setSlider] = useState(false);
-  const [hide, setHide] = useState(false);
-  
-  const handleSlider = () => {
-    if(slider){
-      setSlider(!slider);
-    } else {
-      setSlider(!slider);
-    }
-  }
-
   $('#mainContents').click((e) => {
-    if(!$(e.target).hasClass("area")) {
-      console.log("됨?")
+    if(slider) {
+      setSlider(!slider);
     }
   })
+  
+  const handleSlider = () => {
+    if(slider === false){
+      setSlider(!slider);
+    } 
+  }
+  
+  
 
   return (
     <>
