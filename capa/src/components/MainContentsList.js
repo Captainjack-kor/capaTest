@@ -3,69 +3,22 @@ import "../style/MainContentsList.css";
 import axios from "axios";
 
 const MainContentsList = ({ inMeetingHandleValue }) => {
+  const [list, setList] = useState({ lists:[]});
+
   useEffect(() => {
     axios.get('http://localhost:3001/requests')
     .then(value => { 
       setList({ lists: [...list.lists, ...value.data]})
     })
     .catch(Error => { 
-      console.log("아니 왜 안됨")
-    }, [])
-  })
-  
-  
+      console.log(Error)
+    })
+  }, [])
 
-  const [list, setList] = useState({ lists:[
-    {
-      id: 1,
-      title: "자동차 시제품 제작",
-      client: "A 고객사",
-      due: "2020.12.14",
-      count: 2,
-      amount: 100,
-      method: ["밀링", "선반"],
-      material: ["알루미늄"],
-      status: "대기중"
-    },
-    {
-      id: 2,
-      title: "비행기 시제품 제작",
-      client: "B 고객사",
-      due: "2020.12.13",
-      count: 2,
-      amount: 100,
-      method: ["선반"],
-      material: ["탄소강", "강철"],
-      status: "상담중"
-    },
-  ]});
-
-  console.log(list);
-
-
-  //const [meeting, setMeeting] = useState(0);
-  //const [check, setCheck] = useState(false);
-  // const inMeetingCounter = () => {
-  //   for(let i = 0; i < list.lists.length; i++) {
-  //     if(list.lists[i].inMeeting === true) {
-  //       setMeeting(meeting + 1);
-  //     }
-  //   }
-  // }
-
-  // const inMeetingChecker = () =>{
-  //   inMeetingCounter();
-  //   if(meeting > 0) {
-  //     setCheck(!check)
-  //     setMeeting(0);
-  //   } 
-  // }
-
-  // inMeetingChecker();
 
   const inMeetingChecker = list.lists.filter(value => value.status === "상담중");
 
-  //console.log(inMeetingChecker.length);
+  
 
   return (
     <>

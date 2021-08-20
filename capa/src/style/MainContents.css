@@ -197,7 +197,6 @@ input:checked + .slider:before {
 
 @media screen and ( max-width:767px ) {
   #mainContents {
-    display: flex;
     height: 100vh;
     /* width: 100%; */
     margin-left: 1rem;
@@ -217,5 +216,18 @@ input:checked + .slider:before {
   .toggleWithDiscPosition {
     margin-left: 0.5rem;
     margin-top: 1.5rem;
+  }
+
+  .leftSpace {
+    display: none;
+  }
+
+  .middleSpace {
+    flex: 10;
+    margin-top: 3rem;
+  }
+  
+  .rightSpace {
+    display: none;
   }
 }

@@ -64,7 +64,7 @@
   #header > div {
     display: flex;
     /* margin-top: 0.8rem; */
-    margin-left: 2.5rem;
+    margin-left: 1.3rem;
     padding-right: 0rem;
   }
 
@@ -91,4 +91,10 @@
     cursor: pointer;
   }
 
+  .mobileSliderBtn {
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    z-index: 1;
+  }
 }

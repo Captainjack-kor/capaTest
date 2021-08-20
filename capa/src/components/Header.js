@@ -1,12 +1,23 @@
 import { BankOutlined, MenuOutlined } from '@ant-design/icons';
 import "../style/Header.css";
+import React, { useState } from "react";
 
 const Header = () => {
+  const [slider, setSlider] = useState(false);
+  const handleSlider = () => {
+    //console.log("작동완료")
+    if(slider){
+      setSlider(!slider);
+    } else {
+      setSlider(!slider);
+    }
+  }
+
   return (
     <>
       <div id="header">
         <div className="leftHeaderContents">
-          <MenuOutlined className="mobileMenuBtn"/>
+          <MenuOutlined className="mobileMenuBtn" onClick={handleSlider}/>
           <div className="capaLogo"> CAPA </div>
           <div className="capaLogoName"> 파트너스 </div>
         </div>
