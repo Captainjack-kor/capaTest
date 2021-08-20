@@ -1,7 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../style/MainContentsList.css";
+import axios from "axios";
 
 const MainContentsList = ({ inMeetingHandleValue }) => {
+  useEffect(() => {
+    axios.get('http://localhost:3001/requests')
+    .then(value => { 
+      setList({ lists: [...list.lists, ...value.data]})
+    })
+    .catch(Error => { 
+      console.log("아니 왜 안됨")
+    }, [])
+  })
+  
+  
+
   const [list, setList] = useState({ lists:[
     {
       id: 1,
@@ -26,6 +39,9 @@ const MainContentsList = ({ inMeetingHandleValue }) => {
       status: "상담중"
     },
   ]});
+
+  console.log(list);
+
 
   //const [meeting, setMeeting] = useState(0);
   //const [check, setCheck] = useState(false);
@@ -84,11 +100,11 @@ const MainContentsList = ({ inMeetingHandleValue }) => {
                         <div> {t.count} </div>
                         <div> {t.amount} </div>
                         <div> {t.method.map((i) =>
-                          <span>{t.method[t.method.length - 1] === i ? i : i + ", " }</span>
+                           t.method[t.method.length - 1] === i ? i : i + ", "
                           )}
                         </div>
                         <div> {t.material.map((i) =>
-                          <span>{t.material[t.material.length-1] === i ? i : i + ", " }</span>
+                           t.material[t.material.length-1] === i ? i : i + ", " 
                           )}
                         </div>
                       </div>
@@ -133,13 +149,13 @@ const MainContentsList = ({ inMeetingHandleValue }) => {
                   <div className="producsValue">
                     <div> {t.count} </div>
                     <div> {t.amount} </div>
-                    <div> {t.method.map((i) =>
-                        <span>{t.method[t.method.length - 1] === i ? i : i + ", " }</span>
-                        )}
+                    <div> {t.method.map((i) => 
+                        t.method[t.method.length - 1] === i ? i : i + ", " 
+                    )}
                       </div>
                       <div> {t.material.map((i) =>
-                        <span>{t.material[t.material.length-1] === i ? i : i + ", " }</span>
-                        )}
+                        t.material[t.material.length-1] === i ? i : i + ", " 
+                      )}
                       </div>
                   </div>
                 </div>
