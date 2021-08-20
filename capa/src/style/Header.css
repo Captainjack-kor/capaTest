@@ -49,6 +49,10 @@
   display: none;
 }
 
+.mobileSliderBtn {
+  display: none;
+}
+
 @media screen and ( max-width:767px ) {
   #header {
     display: flex;
@@ -92,9 +96,46 @@
   }
 
   .mobileSliderBtn {
-    position: absolute;
-    background-color: red;
-    width: 100%;
+    display: block;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    box-shadow : rgba(39, 38, 38, 0.5) 0 0 0 9999px;
+    width: 65%;
+    top: 0;
+    left: 0;
+    height: 100%;
     z-index: 1;
+    transition:all .35s;
+    
+  }
+
+  .logoPositioning {
+    height: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid lightgray;
+    
+  }
+
+  .logoPositioning > div {
+    color: rgb(48, 116, 219);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .mobileLOGOIMG {
+    font-weight: 700;
+    margin-left: 1.8rem;
+    margin-right: 0.5rem;
+  }
+
+  .belowInfo {
+    color: black;
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+
+  .belowInfo > div {
+    margin-top: 1rem;
   }
 }

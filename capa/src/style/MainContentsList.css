@@ -111,8 +111,14 @@
 }
 
 .producsValue {
+  display: flex;
+  flex-direction: column;
   margin-left: 3rem;
   font-weight: bold;
+}
+
+.producsValue > div {
+  flex: 1;
 }
 
 @media ( max-width:767px ) {
