@@ -1,13 +1,31 @@
 import "../style/MainContents.css";
 import MainContentsList from "../components/MainContentsList";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import $ from "jquery";
 
 const MainContents = () => {
   const [toggle, setToggle] = useState(false);
   const onChange = (e) => {
     setToggle(!toggle);
   }
-  // console.log("check: "+ toggle);
+  const [milling, setMilling] = useState(false);
+  const [lathe, setLathe] = useState(false);
+
+  const handleMillingValue = () => {
+    if($("input:checkbox[name=is_milling]").is(":checked") == true) {
+      setMilling(!milling);
+    } else {
+      setMilling(!milling);
+    }
+  }
+
+  const handleLatheValue = () => {
+    if($("input:checkbox[name=is_lathe]").is(":checked") == true) {
+      setLathe(!lathe);
+    } else {
+      setLathe(!lathe);
+    }
+  }
 
   return (
     <div id="mainContents">
@@ -25,10 +43,10 @@ const MainContents = () => {
               </div>
               <div className="dropdownContents1">
                 <p>
-                  <input type="checkbox" name="" value="" /> 밀링 
+                  <input type="checkbox" name="is_milling" value="" onClick={handleMillingValue}/> 밀링 
                 </p>
                 <p>
-                  <input type="checkbox" name="" value=""/> 선반
+                  <input type="checkbox" name="is_lathe" value="" onClick={handleLatheValue}/> 선반
                 </p>
               </div>
               
@@ -69,7 +87,8 @@ const MainContents = () => {
           </div>
         </div>
         <div className="listPosition">
-          <MainContentsList inMeetingHandleValue={toggle}/>
+          <MainContentsList inMeetingHandleValue={toggle} 
+            isMilling={milling} isLathe={lathe}/>
         </div>
       </div>
 
