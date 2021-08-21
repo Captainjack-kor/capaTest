@@ -10,6 +10,8 @@ const MainContents = () => {
   }
   const [milling, setMilling] = useState(false);
   const [lathe, setLathe] = useState(false);
+  const [checkbox, setCheckbox] = useState(false);
+  const [count, setCount] = useState(0);
 
   const handleMillingValue = () => {
     if($("input:checkbox[name=is_milling]").is(":checked") == true) {
@@ -27,6 +29,24 @@ const MainContents = () => {
     }
   }
 
+  useEffect(()=> 
+    setCount($("input:checkbox[name=droplists]:checked").length)
+  )
+
+  const handleCheckbox = () => {
+    if($("input:checkbox[name=droplists]:checked").length > 0) {
+      setCheckbox(true);
+      setCount(count+1);
+    } else {
+      setCheckbox(false);
+    }
+  }
+
+  const handleFilterInit = () => {
+    $("input[name=droplists]:checkbox").prop("checked", false);
+    setCheckbox(false);
+  }
+  
   return (
     <div id="mainContents">
       <div className="leftSpace"> </div>
@@ -52,25 +72,38 @@ const MainContents = () => {
               
             </div>
             <div className="dropDown" >
+              {checkbox ? 
+                <div className="setFilterInfo">
+                  <div id="dropboxEffect"> 
+                    <div> 재료({count})</div>
+                    <span> ▼ </span>
+                  </div> 
+                  <div className="filterPosition" onClick={handleFilterInit}>
+                    <img className="filterIcon" src="https://media.vlpt.us/images/iooi75/post/0dc32d5e-b354-4a94-8d01-22b86fb729c3/image.png" alt=""/> 
+                    <span className="filterReset">필터링 리셋</span>
+                  </div>
+                </div>
+              : 
               <div className="dropButton2"> 
                 <div> 재료 </div>
                 <span> ▼ </span>
               </div>
+              }
               <div className="dropdownContents2">
                 <p>
-                  <input type="checkbox" name="" value="" /> 알루미늄
+                  <input type="checkbox" name="droplists" value="" onClick={handleCheckbox}/> 알루미늄
                 </p>
                 <p>
-                  <input type="checkbox" name="" value=""/> 탄소강
+                  <input type="checkbox" name="droplists" value="" onClick={handleCheckbox}/> 탄소강
                 </p>
                 <p>
-                  <input type="checkbox" name="" value=""/> 구리
+                  <input type="checkbox" name="droplists" value="" onClick={handleCheckbox}/> 구리
                 </p>
                 <p>
-                  <input type="checkbox" name="" value=""/> 합금강
+                  <input type="checkbox" name="droplists" value="" onClick={handleCheckbox}/> 합금강
                 </p>
                 <p>
-                  <input type="checkbox" name="" value=""/> 강철
+                  <input type="checkbox" name="droplists" value="" onClick={handleCheckbox}/> 강철
                 </p>
               </div>
             </div>

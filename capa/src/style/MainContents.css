@@ -69,6 +69,10 @@
   cursor: pointer;
 }
 
+.dropButton2:hover {
+  border: 1px solid rgb(37, 175, 230);
+}
+
 .dropButton > div {
   color: black;
 }
@@ -193,6 +197,41 @@ input:checked + .slider:before {
 
 .nothingInhere > div {
   margin-top: 2.8rem;
+}
+
+#dropboxEffect {
+  width: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: rgb(31, 84, 228);
+  color: rgb(255, 255, 255);
+  font-size: 0.5rem;
+  border-radius: 5px;
+  padding: 0.3rem 1rem 0.3rem 0.5rem; 
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.setFilterInfo {
+  display: flex;
+}
+
+.filterReset {
+  margin-top: 0.3rem;
+  color: #2196F3;
+}
+
+.filterIcon {
+  margin-top: 0.3rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.filterPosition:hover {
+  cursor: pointer;
 }
 
 @media screen and ( max-width:767px ) {

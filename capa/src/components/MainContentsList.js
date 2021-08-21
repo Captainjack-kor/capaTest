@@ -19,6 +19,16 @@ const MainContentsList = ({ inMeetingHandleValue, isMilling, isLathe }) => {
   const inMeetingChecker = list.lists.filter(value => value.status === "상담중");
   const filterMethod = list.lists.filter(value => value.method.indexOf("밀링") !== -1);
   const filterMaterial = list.lists.filter(value => value.method.indexOf("선반") !== -1);
+
+  let filterUI = {
+    milling: <> </>,
+    lathe: <> </>,
+    al: <></>,
+    carbon: <></>,
+    copper: <></>,
+    asteel: <></>,
+    steel: <></>,
+  }
   
   return (
     <>
